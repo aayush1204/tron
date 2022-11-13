@@ -10,10 +10,10 @@
             <router-link to="/">Home</router-link>
           </li>
           <li>
-            <router-link to="/surveycreate">SurveyCreate</router-link>
+            <router-link to="/surveycreate"></router-link>
           </li>
           <li>
-            <router-link to="/survey">Survey</router-link>
+            <router-link to="/survey">Fill Survey</router-link>
           </li>
           <li>
             <router-link to="/creator">Survey Creator</router-link>

@@ -2,6 +2,8 @@
   <div class="container">
     <h1>SurveyJS Library / Runner</h1>
     <Survey :survey="survey" />
+
+         
   </div>
 </template>
 
@@ -12,13 +14,9 @@ StylesManager.applyTheme("defaultV2");
 import { json } from "../data/survey_json";
 
 
-import {  setLibraryContract, getTronWeb, makeSurvey } from "../plugins/utils"
+import {  setLibraryContract, getTronWeb, test } from "../plugins/utils"
 import { sampleTx } from "../plugins/walletConnect"
-// import { Veu } from
 
-// import JsonCSV from 'vue-json-csv'
-
-// Vue.component('downloadCsv', JsonCSV)
 
 
 export default {
@@ -34,7 +32,7 @@ export default {
     };
   },
   methods: {
-    surveyComplete (sender) {
+    surveyComplete () {
 
      getTronWeb();
     
@@ -46,19 +44,8 @@ export default {
         console.log("Begin to obtain the books information");
         // fetch all books
         // const books = await fetchAllBooks();
-          
-          const results = JSON.stringify(sender.data);
-          alert(results);
-
-
-
-         // <download-csv
-           // :data = sender.data
-           // name = file.csv>
-          //  Download Data
-         // </download-csv>
-
-         await makeSurvey();
+           
+         await test(1);
         // this.posts = books;
         // console.log("The total number of Books: "+ books.length);
         

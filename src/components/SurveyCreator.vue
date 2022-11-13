@@ -29,7 +29,7 @@ export default {
   name: "survey-creator",
   props: ['json'],
   mounted() {
-    const options = { showLogicTab: true };
+    const options = { showLogicTab: false };
     this.creator = new SurveyCreator(options);
     this.creator.JSON = this.json;
     this.creator.saveSurveyFunc = function() {
