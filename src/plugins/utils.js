@@ -2,7 +2,7 @@
 
 let account = null
 // let libraryContract
-let libraryContractAddress = 'TVpvHPdXpiMYcGHYacchS5FDdaYdSVUAmQ' // Paste Contract address here
+let libraryContractAddress = 'TBphgLL4J51pN4Um5KjyvNhHTwfHJwN5q9' // Paste Contract address here
 let bookRentContract = null
 
 
@@ -20,15 +20,6 @@ export function getTronWeb(){
   }, 10)
 }
 
-// function fromHex(hex) {
-//   var str = '';
-//   for (var i=0; i<hex.length; i+=2) {
-//       var v = parseInt(hex.substr(i, 2), 16);
-//       if(v){ str += String.fromCharCode(v); }
-//   }
-//   return str;
-// }
- 
 
 export async function setLibraryContract() {
   // TODO: abtain contract Object
@@ -46,8 +37,9 @@ export async function test() {
 
 }
 
+
 export async function makeSurvey(limit) {
- 
+
   const bookId1  = await bookRentContract.makeSurvey(limit).send();
   console.log("taken survey");
   console.log(bookId1);

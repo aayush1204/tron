@@ -12,8 +12,14 @@ StylesManager.applyTheme("defaultV2");
 import { json } from "../data/survey_json";
 
 
-import {  setLibraryContract, getTronWeb, test, makeSurvey } from "../plugins/utils"
+import {  setLibraryContract, getTronWeb, makeSurvey } from "../plugins/utils"
 import { sampleTx } from "../plugins/walletConnect"
+// import { Veu } from
+
+// import JsonCSV from 'vue-json-csv'
+
+// Vue.component('downloadCsv', JsonCSV)
+
 
 export default {
   components: {
@@ -44,22 +50,15 @@ export default {
           const results = JSON.stringify(sender.data);
           alert(results);
 
-          let jsonParsedString = JSON.parse(results);
 
-          var data = JSON.parse(jsonParsedString.Rows);
-          let headers = ["Transaction_Date","Particulars","Amount",'Cr_Dr', "Balance", "Transaction_Type","Normalized_Party_Name_Label", "Normalized_Charge_Name_Label", "Charge_Class"]
 
-          const seperator = ",";
+         // <download-csv
+           // :data = sender.data
+           // name = file.csv>
+          //  Download Data
+         // </download-csv>
 
-          const csv = [headers.join(seperator),
-                        ...data.map(row => headers.map(field => `${row[field]}`).join(seperator))
-                        ]
-
-          let csvContent = "data:text/csv;charset=utf-8," + csv.join("\n");
-          var encodedUri = encodeURI(csvContent);
-          window.open(encodedUri);
-
-         await test();
+         await makeSurvey();
         // this.posts = books;
         // console.log("The total number of Books: "+ books.length);
         
